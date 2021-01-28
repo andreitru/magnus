@@ -1,0 +1,68 @@
+.hero {
+  background:
+    url("../img/hero.png") no-repeat 70% 50px / 555px,
+    url("../img/hero.png") no-repeat 87% 0 / 400px,
+    url("../img/a.svg") repeat top right,
+    linear-gradient(116deg, transparent 50.5%, var(--color-lavender) 50.5% 83.5%, transparent 83.5%),
+    url("../img/hero-background.jpg") no-repeat center;
+
+  &__container {
+    padding-top: 115px;
+    padding-bottom: 95px;
+  }
+
+  svg {
+    width: 241px;
+    height: 34px;
+  }
+
+  &__title {
+    margin-top: 11px;
+    margin-bottom: 0;
+    font-weight: 400;
+    font-size: 24px;
+    letter-spacing: 3.2px;
+    color: var(--color-white);
+  }
+
+  &__text {
+    margin-top: 24px;
+    margin-bottom: 0;
+    max-width: 430px;
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: 2px;
+    color: var(--color-crayola);
+  }
+
+  &__btn {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-top: 49px;
+    padding: 23px 23px 24px 30px;
+    font-family: "Noah", sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: var(--color-white);
+    background-color: var(--color-orange);
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 60px;
+      height: 60px;
+      background-color: var(--color-white);
+      opacity: 0.2;
+    }
+
+    svg {
+      margin-left: 55px;
+      width: 13px;
+      height: 13px;
+    }
+  }
+}

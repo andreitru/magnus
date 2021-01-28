@@ -1,0 +1,87 @@
+.footer {
+  background:
+    url("../img/a-footer.svg") repeat top,
+    linear-gradient(var(--color-ocean-blue) 50%, #091116 100%),
+    var(--color-ocean-blue);
+
+  &__container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-top: 56px;
+    padding-bottom: 37px;
+  }
+
+  &__left {
+    width: 40%;
+  }
+
+  &__right {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 50%;
+  }
+
+  &__copy {
+    margin-top: 29px;
+    margin-bottom: 9px;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0.6px;
+    color: var(--color-white);
+  }
+
+  &__logo {
+    img {
+      width: 160px;
+    }
+  }
+
+  &__text {
+    margin: 0 0 26px;
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: 0.75px;
+    color: var(--color-white);
+    opacity: 0.4;
+  }
+
+  &__link {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    font-family: "Noah", sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 0.3px;
+    white-space: nowrap;
+    text-transform: uppercase;
+    color: var(--color-white);
+
+    &:first-of-type {
+      margin-right: 17px;
+    }
+  }
+
+  &__wishes {
+    margin-top: 5px;
+    margin-right: 40px;
+    padding: 100px 50px 10px;
+    background:
+      url("../img/whishes.png") no-repeat center 15px,
+      rgba(255, 255, 255, 0.1);
+  }
+
+  &__complaints {
+    width: 157px;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: normal;
+    letter-spacing: 0.7px;
+    text-align: center;
+    color: var(--color-white);
+  }
+
+  &__text-block {
+    margin-top: 25px;
+  }
+}
