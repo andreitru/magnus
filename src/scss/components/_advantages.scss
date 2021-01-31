@@ -2,16 +2,40 @@
   &__container {
     padding-top: 44px;
     padding-bottom: 50px;
+
+    @include sm {
+      padding-top: 130px;
+      padding-bottom: 20px;
+    }
+
+    @include xs {
+      padding-top: 153px;
+      padding-bottom: 38px;
+    }
   }
 
   &__list {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
+
+    @include mobile {
+      justify-content: space-around;
+    }
+
+    @include sm {
+      flex-wrap: wrap;
+    }
+
+    @include xs {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 }
 
 .advantages-item {
+  position: relative;
   border-right: 1px solid rgba(81, 108, 133, 0.15);
   padding-right: 6.4%;
   padding-left: 6.2%;
@@ -19,6 +43,12 @@
   &__content {
     max-width: 200px;
     text-align: center;
+
+    @include sm {
+      padding-right: 20px;
+      padding-left: 20px;
+      max-width: 100%;
+    }
   }
 
   svg {
@@ -32,6 +62,12 @@
     font-size: 16px;
     letter-spacing: 0.3px;
     color: var(--color-distant-blue);
+
+    @include xs {
+      margin-bottom: 11px;
+      font-size: 12px;
+      letter-spacing: 1.5px;
+    }
   }
 
   &__text {
@@ -40,6 +76,11 @@
     line-height: 24px;
     letter-spacing: 1px;
     color: var(--color-distant-blue);
+
+    @include xs {
+      font-size: 12px;
+      line-height: 20px;
+    }
   }
 
   &:first-child {
@@ -49,5 +90,42 @@
   &:last-child {
     border: none;
     padding-right: 0;
+  }
+
+  @include mobile {
+    padding-right: 2.5%;
+    padding-left: 2.5%;
+  }
+
+  @include sm {
+    margin-bottom: 35px;
+    border: none;
+    padding: 0;
+    width: 50%;
+
+    &:nth-child(odd) {
+      border-right: 1px solid rgba(81, 108, 133, 0.15);
+    }
+  }
+
+  @include xs {
+    margin-bottom: 41px;
+    width: 90%;
+
+    &:not(:last-child) {
+      &::before {
+        content: "";
+        position: absolute;
+        right: 50%;
+        bottom: -21px;
+        border-bottom: 1px solid rgba(81, 108, 133, 0.15);
+        width: 150px;
+        transform: translateX(50%);
+      }
+    }
+
+    &:nth-child(odd) {
+      border-right: none;
+    }
   }
 }

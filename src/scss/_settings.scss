@@ -67,12 +67,8 @@ ul {
 
 .container {
   margin: 0 auto;
-  padding: 0 50px;
-  max-width: 1400px;
-
-  @include xs {
-    padding: 0 20px;
-  }
+  padding: 0 20px;
+  max-width: 1340px;
 }
 
 .js-focus-visible :focus:not(.focus-visible) {

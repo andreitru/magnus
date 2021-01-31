@@ -2,49 +2,51 @@
   <div class="container products__container">
     <aside class="products__aside products-aside">
       <h2 class="products-aside__title">Продукция и услуги</h2>
-      <ul class="products-aside__list">
-        <li class="products-aside__item products-aside__item--active">
-          <p>Индустриальное оборудование</p>
-        </li>
-        <li class="products-aside__item">
-          <p>Бытовое оборудование</p>
-        </li>
-        <li class="products-aside__item">
-          <p>Подбор запчастей</p>
-        </li>
-        <li class="products-aside__item">
-          <p>Сервис</p>
-        </li>
-      </ul>
+      <div class="swiper-container products-aside__container">
+        <ul class="products-aside__list swiper-wrapper">
+          <li class="products-aside__item products-aside__item--active swiper-slide">
+            <p>Индустриальное оборудование</p>
+          </li>
+          <li class="products-aside__item swiper-slide">
+            <p>Бытовое оборудование</p>
+          </li>
+          <li class="products-aside__item swiper-slide">
+            <p>Подбор запчастей</p>
+          </li>
+          <li class="products-aside__item swiper-slide">
+            <p>Сервис</p>
+          </li>
+        </ul>
+      </div>
+
     </aside>
     <div class="products__list products-list">
-      <ul class="products-list__list">
-        <li class="products-list__item">
-          <img src="img/compressor.png" alt="компрессор" class="products-list__img">
-          <p class="products-list__descr">Компрессоры</p>
-          <svg><use xlink:href="img/sprite.svg#arrow-header-top-select"></use></svg>
-        </li>
-        <li class="products-list__item">
-          <img src="img/air-system.png" alt="компрессор" class="products-list__img">
-          <p class="products-list__descr">Системы подготовки воздуха</p>
-        </li>
-        <li class="products-list__item">
-          <img src="img/hero.png" alt="компрессор" class="products-list__img">
-          <p class="products-list__descr">Дизельные электростанции</p>
-        </li>
-        <li class="products-list__item">
-          <img src="img/nitrogen.png" alt="компрессор" class="products-list__img">
-          <p class="products-list__descr">Генераторы азота и азотные станции</p>
-        </li>
-        <li class="products-list__item">
-          <img src="img/fridge.png" alt="компрессор" class="products-list__img">
-          <p class="products-list__descr">Холодильное оборудование</p>
-        </li>
-        <li class="products-list__item">
-          <img src="img/hero.png" alt="компрессор" class="products-list__img">
-          <p class="products-list__descr">Инженерные решения</p>
-        </li>
-      </ul>
+      <div class="swiper-container products-list__container">
+        <ul class="products-list__list swiper-wrapper">
+          <li class="products-list__item products-list__item--compressor swiper-slide">
+            <p class="products-list__descr">Компрессоры</p>
+            <svg>
+              <use xlink:href="img/sprite.svg#arrow-header-top-select"></use>
+            </svg>
+          </li>
+          <li class="products-list__item products-list__item--air swiper-slide">
+            <p class="products-list__descr">Системы подготовки воздуха</p>
+          </li>
+          <li class="products-list__item products-list__item--diesel swiper-slide">
+            <p class="products-list__descr">Дизельные электростанции</p>
+          </li>
+          <li class="products-list__item products-list__item--nitrogen swiper-slide">
+            <p class="products-list__descr">Генераторы азота и азотные станции</p>
+          </li>
+          <li class="products-list__item products-list__item--fridge swiper-slide">
+            <p class="products-list__descr">Холодильное оборудование</p>
+          </li>
+          <li class="products-list__item products-list__item--engineer swiper-slide">
+            <p class="products-list__descr">Инженерные решения</p>
+          </li>
+        </ul>
+      </div>
+
       <button class="btn-reset products__btn">Показать все</button>
     </div>
   </div>

@@ -1,19 +1,76 @@
 .hero {
-  background:
-    url("../img/hero.png") no-repeat 70% 50px / 555px,
-    url("../img/hero.png") no-repeat 87% 0 / 400px,
-    url("../img/a.svg") repeat top right,
-    linear-gradient(116deg, transparent 50.5%, var(--color-lavender) 50.5% 83.5%, transparent 83.5%),
-    url("../img/hero-background.jpg") no-repeat center;
+  position: relative;
+  background: url("../img/a.svg") repeat top right,
+  linear-gradient(116deg, transparent 50.5%, var(--color-lavender) 50.5% 83.5%, transparent 83.5%),
+  url("../img/hero-background.jpg") no-repeat center;
 
   &__container {
     padding-top: 115px;
     padding-bottom: 95px;
+
+    @include mobile {
+      padding-top: 40px;
+      padding-bottom: 155px;
+    }
+
+    @include sm {
+      padding-bottom: 160px;
+    }
+
+    @include xs {
+      padding-top: 31px;
+      height: 430px;
+    }
   }
 
-  svg {
+  &__background {
+    position: absolute;
+    right: 3.3vw;
+    top: 0;
+    width: 42.3vw;
+    height: 600px;
+    max-width: 1000px;
+    background: url("../img/hero.png") no-repeat -90px 50px / 555px,
+    url("../img/hero.png") no-repeat 14.6vw 0 / 400px;
+
+    @include md {
+      top: 50px;
+      background: url("../img/hero.png") no-repeat -90px 50px / 455px,
+      url("../img/hero.png") no-repeat 14.6vw 0 / 300px;
+    }
+
+    @include mobile {
+      top: 80px;
+      background: url("../img/hero.png") no-repeat -80px 50px / 400px,
+      url("../img/hero.png") no-repeat 14.6vw 0 / 250px;
+    }
+
+    @include sm {
+      right: 50%;
+      top: 200px;
+      width: 500px;
+      background: url("../img/hero.png") no-repeat 10px 70px / 350px,
+      url("../img/hero.png") no-repeat 310px 150px / 150px;
+      transform: translateX(50%);
+    }
+
+    @include xs {
+      top: 275px;
+      width: 300px;
+      height: 300px;
+      background: url("../img/hero.png") no-repeat -28px 70px / 256px,
+      url("../img/hero.png") no-repeat 176px 112px / 135px;
+    }
+
+  }
+
+  &__logo {
     width: 241px;
     height: 34px;
+
+    @include mobile {
+      display: none;
+    }
   }
 
   &__title {
@@ -23,6 +80,14 @@
     font-size: 24px;
     letter-spacing: 3.2px;
     color: var(--color-white);
+
+    @include xs {
+      font-weight: 700;
+      font-size: 28px;
+      line-height: 36px;
+      letter-spacing: 2.5px;
+      text-align: center;
+    }
   }
 
   &__text {
@@ -33,6 +98,15 @@
     line-height: 30px;
     letter-spacing: 2px;
     color: var(--color-crayola);
+
+    @include xs {
+      margin-top: 17px;
+      max-width: 100%;
+      font-size: 14px;
+      line-height: 24px;
+      letter-spacing: 1.52px;
+      text-align: center;
+    }
   }
 
   &__btn {
@@ -40,7 +114,7 @@
     display: flex;
     align-items: center;
     margin-top: 49px;
-    padding: 23px 23px 24px 30px;
+    padding: 23px 91px 24px 30px;
     font-family: "Noah", sans-serif;
     font-size: 12px;
     letter-spacing: 0.5px;
@@ -60,9 +134,29 @@
     }
 
     svg {
-      margin-left: 55px;
+      position: absolute;
+      right: 22px;
+      top: 24px;
       width: 13px;
       height: 13px;
     }
+
+    @include xs {
+      margin-top: 40px;
+      margin-right: auto;
+      margin-left: auto;
+      width: 86%;
+    }
+  }
+
+  @include mobile {
+    background: url("../img/a.svg") repeat top right,
+    linear-gradient(116deg, transparent 53%, var(--color-lavender) 53% 83.5%, transparent 83.5%),
+    url("../img/hero-background.jpg") no-repeat center;
+  }
+
+  @include sm {
+    background: url("../img/hero-background.jpg") no-repeat center;
+    background-size: cover;
   }
 }

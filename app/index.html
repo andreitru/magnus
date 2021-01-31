@@ -24,8 +24,8 @@
           <img src="img/logo.svg" alt="logo">
         </a>
         <span class="header-top__title">
-      Производство, поставка и сервисное обслуживание компрессорного оборудования
-    </span>
+          Производство, поставка и сервисное обслуживание компрессорного оборудования
+        </span>
         <div class="header-top__phones">
           <svg>
             <use xlink:href="img/sprite.svg#phone"></use>
@@ -52,6 +52,23 @@
             </ul>
           </div>
         </div>
+      </div>
+      <div class="header-top__mobile">
+        <div class="header-bottom__cart cart">
+          <div class="cart__counter">
+            <svg>
+              <use xlink:href="img/sprite.svg#cart"></use>
+            </svg>
+            <span class="cart__count">19</span>
+          </div>
+          <div class="cart__price">
+            <span class="cart__name">Корзина:</span>
+            <span class="cart__value">2 400 &#8381;</span>
+          </div>
+        </div>
+        <button class="btn-reset header-top__burger burger">
+          <span class="burger__line"></span>
+        </button>
       </div>
     </div>
   </div>
@@ -186,7 +203,7 @@
     <section class="hero">
   <div class="hero__container container">
     <div class="hero__content">
-      <svg>
+      <svg class="hero__logo">
         <use xlink:href="img/sprite.svg#logo"></use>
       </svg>
       <h1 class="hero__title">Компрессорное оборудование</h1>
@@ -199,6 +216,7 @@
       </button>
     </div>
   </div>
+  <div class="hero__background"></div>
 </section>
 
     <section class="advantages">
@@ -249,49 +267,51 @@
   <div class="container products__container">
     <aside class="products__aside products-aside">
       <h2 class="products-aside__title">Продукция и услуги</h2>
-      <ul class="products-aside__list">
-        <li class="products-aside__item products-aside__item--active">
-          <p>Индустриальное оборудование</p>
-        </li>
-        <li class="products-aside__item">
-          <p>Бытовое оборудование</p>
-        </li>
-        <li class="products-aside__item">
-          <p>Подбор запчастей</p>
-        </li>
-        <li class="products-aside__item">
-          <p>Сервис</p>
-        </li>
-      </ul>
+      <div class="swiper-container products-aside__container">
+        <ul class="products-aside__list swiper-wrapper">
+          <li class="products-aside__item products-aside__item--active swiper-slide">
+            <p>Индустриальное оборудование</p>
+          </li>
+          <li class="products-aside__item swiper-slide">
+            <p>Бытовое оборудование</p>
+          </li>
+          <li class="products-aside__item swiper-slide">
+            <p>Подбор запчастей</p>
+          </li>
+          <li class="products-aside__item swiper-slide">
+            <p>Сервис</p>
+          </li>
+        </ul>
+      </div>
+
     </aside>
     <div class="products__list products-list">
-      <ul class="products-list__list">
-        <li class="products-list__item">
-          <img src="img/compressor.png" alt="компрессор" class="products-list__img">
-          <p class="products-list__descr">Компрессоры</p>
-          <svg><use xlink:href="img/sprite.svg#arrow-header-top-select"></use></svg>
-        </li>
-        <li class="products-list__item">
-          <img src="img/air-system.png" alt="компрессор" class="products-list__img">
-          <p class="products-list__descr">Системы подготовки воздуха</p>
-        </li>
-        <li class="products-list__item">
-          <img src="img/hero.png" alt="компрессор" class="products-list__img">
-          <p class="products-list__descr">Дизельные электростанции</p>
-        </li>
-        <li class="products-list__item">
-          <img src="img/nitrogen.png" alt="компрессор" class="products-list__img">
-          <p class="products-list__descr">Генераторы азота и азотные станции</p>
-        </li>
-        <li class="products-list__item">
-          <img src="img/fridge.png" alt="компрессор" class="products-list__img">
-          <p class="products-list__descr">Холодильное оборудование</p>
-        </li>
-        <li class="products-list__item">
-          <img src="img/hero.png" alt="компрессор" class="products-list__img">
-          <p class="products-list__descr">Инженерные решения</p>
-        </li>
-      </ul>
+      <div class="swiper-container products-list__container">
+        <ul class="products-list__list swiper-wrapper">
+          <li class="products-list__item products-list__item--compressor swiper-slide">
+            <p class="products-list__descr">Компрессоры</p>
+            <svg>
+              <use xlink:href="img/sprite.svg#arrow-header-top-select"></use>
+            </svg>
+          </li>
+          <li class="products-list__item products-list__item--air swiper-slide">
+            <p class="products-list__descr">Системы подготовки воздуха</p>
+          </li>
+          <li class="products-list__item products-list__item--diesel swiper-slide">
+            <p class="products-list__descr">Дизельные электростанции</p>
+          </li>
+          <li class="products-list__item products-list__item--nitrogen swiper-slide">
+            <p class="products-list__descr">Генераторы азота и азотные станции</p>
+          </li>
+          <li class="products-list__item products-list__item--fridge swiper-slide">
+            <p class="products-list__descr">Холодильное оборудование</p>
+          </li>
+          <li class="products-list__item products-list__item--engineer swiper-slide">
+            <p class="products-list__descr">Инженерные решения</p>
+          </li>
+        </ul>
+      </div>
+
       <button class="btn-reset products__btn">Показать все</button>
     </div>
   </div>

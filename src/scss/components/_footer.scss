@@ -1,19 +1,31 @@
 .footer {
-  background:
-    url("../img/a-footer.svg") repeat top,
-    linear-gradient(var(--color-ocean-blue) 50%, #091116 100%),
-    var(--color-ocean-blue);
+  background: url("../img/a-footer.svg") repeat top,
+  linear-gradient(var(--color-ocean-blue) 50%, #091116 100%),
+  var(--color-ocean-blue);
 
   &__container {
     display: flex;
+    flex-wrap: wrap;
     align-items: flex-start;
     justify-content: space-between;
     padding-top: 56px;
     padding-bottom: 37px;
+
+    @include xs {
+      padding-top: 40px;
+    }
   }
 
   &__left {
     width: 40%;
+
+    @include mobile {
+      width: 65%;
+    }
+
+    @include xs {
+      width: 95%;
+    }
   }
 
   &__right {
@@ -21,15 +33,33 @@
     align-items: flex-start;
     justify-content: space-between;
     width: 50%;
+
+    @include md {
+      width: 55%;
+    }
+
+    @include mobile {
+      width: 65%;
+    }
+
+    @include xs {
+      flex-direction: column;
+      width: 100%;
+    }
   }
 
   &__copy {
-    margin-top: 29px;
-    margin-bottom: 9px;
+    margin-top: 24px;
+    margin-bottom: 6px;
     font-weight: 700;
     font-size: 14px;
+    line-height: 24px;
     letter-spacing: 0.6px;
     color: var(--color-white);
+
+    @include xs {
+      margin-bottom: 16px;
+    }
   }
 
   &__logo {
@@ -45,6 +75,10 @@
     letter-spacing: 0.75px;
     color: var(--color-white);
     opacity: 0.4;
+
+    @include xs {
+      margin-bottom: 33px;
+    }
   }
 
   &__link {
@@ -60,15 +94,26 @@
     &:first-of-type {
       margin-right: 17px;
     }
+
+    @include xs {
+      display: block;
+      margin-bottom: 23px;
+      border-bottom: none;
+    }
   }
 
   &__wishes {
     margin-top: 5px;
     margin-right: 40px;
     padding: 100px 50px 10px;
-    background:
-      url("../img/whishes.png") no-repeat center 15px,
-      rgba(255, 255, 255, 0.1);
+    background: url("../img/whishes.png") no-repeat center 15px,
+    rgba(255, 255, 255, 0.1);
+
+    @include xs {
+      margin-bottom: 31px;
+      padding-right: 61px;
+      padding-left: 61px;
+    }
   }
 
   &__complaints {
@@ -83,5 +128,9 @@
 
   &__text-block {
     margin-top: 25px;
+
+    @include mobile {
+      margin-top: 0;
+    }
   }
 }
