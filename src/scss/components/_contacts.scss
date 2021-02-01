@@ -109,6 +109,11 @@
     text-transform: uppercase;
     color: var(--color-white);
     background-color: var(--color-orange);
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: var(--color-dark-orange);
+    }
 
     @include mobile {
       margin-top: 60px;

@@ -90,9 +90,14 @@
     white-space: nowrap;
     text-transform: uppercase;
     color: var(--color-white);
+    transition: color 0.3s;
 
     &:first-of-type {
       margin-right: 17px;
+    }
+
+    &:hover {
+      color: var(--color-light-gray-blue);
     }
 
     @include xs {

@@ -42,6 +42,11 @@
     text-transform: uppercase;
     color: var(--color-ocean-blue);
     opacity: 0.3;
+    transition: opacity 0.3s;
+
+    &:hover {
+      opacity: 0.8;
+    }
 
     @include sm {
       display: none;
@@ -87,6 +92,7 @@
     letter-spacing: 1px;
     color: var(--color-ocean-blue);
     opacity: 0.2;
+    transition: opacity 0.3s;
     cursor: pointer;
 
     &:not(:last-child) {
@@ -103,6 +109,10 @@
       @include xs {
         background-position: 0 1em;
       }
+    }
+
+    &:hover {
+      opacity: 0.8;
     }
 
     @include sm {
@@ -195,6 +205,12 @@
     background-size: 90%;
     background-repeat: no-repeat;
     background-color: var(--color-lavender);
+    transition: background-color 0.3s;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #dde2fd;
+    }
 
     &--compressor {
       background-image: url("../img/compressor.png");

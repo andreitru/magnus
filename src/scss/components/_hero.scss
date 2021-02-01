@@ -121,6 +121,7 @@
     text-transform: uppercase;
     color: var(--color-white);
     background-color: var(--color-orange);
+    transition: background-color 0.3s;
 
     &::after {
       content: "";
@@ -139,6 +140,10 @@
       top: 24px;
       width: 13px;
       height: 13px;
+    }
+
+    &:hover {
+      background-color: var(--color-dark-orange);
     }
 
     @include xs {
