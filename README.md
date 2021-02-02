@@ -2,4 +2,4 @@
 
 Test site.
 
-You can to see this web-site by URL [URL](https://andreitru.github.io/)
+You can to see this web-site by [URL](https://andreitru.github.io/)
